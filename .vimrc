@@ -182,3 +182,6 @@ function TitleDet()
     call AddTitle()
 endfunction
 
+set backupdir=./.backup,.,/tmp
+set directory=.,./.backup,/tmp
+
