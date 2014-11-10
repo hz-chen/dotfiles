@@ -120,5 +120,6 @@ set -o vi
 alias q='cd ..; pwd; l; '
 alias src='source ~/.bashrc'
 alias t='tree'
+alias vi3='v ~/.i3/config'
 
 [ -s "/home/chz/.scm_breeze/scm_breeze.sh" ] && source "/home/chz/.scm_breeze/scm_breeze.sh"

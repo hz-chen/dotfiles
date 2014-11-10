@@ -18,7 +18,10 @@ font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 # clear in small sizes. However, if you need a lot of unicode glyphs or
 # right-to-left text rendering, you should instead use pango for rendering and
 # chose a FreeType font, such as:
- font pango:DejaVu Sans Mono 10
+font pango:DejaVu Sans Mono 10
+
+font pango:DejaVu Sans Mono, Terminus Bold Semi-Condensed 11
+font pango:Terminus 11px
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod+Ctrl
@@ -125,7 +128,8 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+# bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exec i3-msg exit
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -162,9 +166,18 @@ bar {
 # bindsym XF86AudioRaiseVolume exec amixer -q set master 2dB+ unmute
 # bindsym XF86AudioLowerVolume exec amixer -q set master 2dB- unmute
 
-bindsym XF86AudioLowerVolume exec /usr/bin/pactl set-sink-volume @DEFAULT_SINK@ -- '-5%'
-bindsym XF86AudioRaiseVolume exec /usr/bin/pactl set-sink-volume @DEFAULT_SINK@ -- '+5%'
-
 # bindsym XF86AudioMute exec amixer -q set Master toggle
 
-exec /usr/libexec/gnome-settings-daemon
+bindsym XF86AudioLowerVolume exec --no-startup-id amixer set Master 3%- 
+bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set Master 3%+
+
+# change colour to match root window
+client.background #342826
+
+# changed these colours for readability
+# class border backgr. text
+client.focused #4c7899 #CA226B #ffffff
+client.unfocused #333333 #747170 #ffffff 
+
+# Take a screenshot upon pressing $mod+x (select an area)
+bindsym --release $mod+x exec --no-startup-id import /tmp/latest-screenshot.png
