@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/home/chz/test'
+let g:netrw_dirhist_2='/home/chz/Desktop/course_gwu/e-comm/moviezone'
+let g:netrw_dirhist_3='/home/chz/Desktop/course_gwu/e-comm'
+let g:netrw_dirhist_4='/home/chz/Desktop/course_scu/信息安全产品开发实践2'
+let g:netrw_dirhist_5='/home/chz/Desktop/course_scu/信息安全产品开发实践2/libnet1'
+let g:netrw_dirhist_6='/home/chz/Desktop/course_scu/信息安全产品开发实践2'
+let g:netrw_dirhist_7='/home/chz/Desktop/course_scu/信息安全产品开发实践2/libnet2'
