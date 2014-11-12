@@ -182,8 +182,8 @@ function TitleDet()
     call AddTitle()
 endfunction
 
-set backupdir=./.backup,.,/tmp
-set directory=.,./.backup,/tmp
+set backupdir=~/.backup,.,/tmp
+set directory=.,~/.backup,/tmp
 
 execute pathogen#infect()
 
