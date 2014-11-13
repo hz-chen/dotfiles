@@ -188,3 +188,4 @@ client.unfocused #333333 #747170 #ffffff
 
 # Take a screenshot upon pressing $mod+x (select an area)
 bindsym --release $mod+x exec --no-startup-id import /tmp/latest-screenshot.png
+exec --no-startup-id nm-applet
