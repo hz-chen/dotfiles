@@ -2,6 +2,8 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
+[ -s "/home/chz/.scm_breeze/scm_breeze.sh" ] && source "/home/chz/.scm_breeze/scm_breeze.sh"
+
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
@@ -122,4 +124,3 @@ alias src='source ~/.bashrc'
 alias t='tree'
 alias vi3='v ~/.i3/config'
 
-[ -s "/home/chz/.scm_breeze/scm_breeze.sh" ] && source "/home/chz/.scm_breeze/scm_breeze.sh"
