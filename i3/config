@@ -161,7 +161,6 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 
 bar {
-<<<<<<< HEAD
     status_command i3status 
 
 ## mode <dock|hide|invisible>
@@ -183,6 +182,7 @@ bar {
         active_workspace   #333333 #5f676a #ffffff
         inactive_workspace #333333 #222222 #888888
         urgent_workspace   #2f343a #900000 #ffffff
+    }
 
 }
 
