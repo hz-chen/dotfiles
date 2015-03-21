@@ -206,3 +206,6 @@ au VimEnter *  NERDTree
 
 "focus back main window
 autocmd VimEnter * wincmd p
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+set expandtab
+
