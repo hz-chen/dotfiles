@@ -138,7 +138,7 @@ map <F4> :call TitleDet()<cr>
 function AddTitle()
     call append(0,"/*******************************************")
     call append(1," *")
-    call append(2," * Author: Hongzhou Chen - hongzhoc@amazon.com")
+    call append(2," * Author: Hongzhou Chen - chenhongzho8107@gmail.com")
     call append(3," *")
     call append(4," *")
     call append(5," * Last modified:\t".strftime("%m-%d-%Y %H:%M"))
@@ -206,6 +206,6 @@ au VimEnter *  NERDTree
 
 "focus back main window
 autocmd VimEnter * wincmd p
-autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 set expandtab
-
+set tabstop=4
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
